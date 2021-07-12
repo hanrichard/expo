@@ -14,8 +14,12 @@ import {
   StyleSheet,
 } from 'react-native';
 import uuid from 'react-native-uuid';
+import { Appearance, useColorScheme } from 'react-native-appearance';
+
+Appearance.getColorScheme();
 
 const HomeScreen = ({navigation}) => {
+  const colorScheme = useColorScheme();
   const mockData = [
     {id: uuid.v4(), title: 'test 1'},
     {id: uuid.v4(), title: 'test 2'},
@@ -58,7 +62,6 @@ const HomeScreen = ({navigation}) => {
   return (
     <SafeAreaView flex={1}>
       <StatusBar barStyle="light-content" />
-
       {/* Add to list */}
       <View style={styles.containerSticky}>
         <View style={styles.containerRow}>
@@ -80,7 +83,7 @@ const HomeScreen = ({navigation}) => {
           }}
         />
         <View style={styles.listHeading}>
-          <Text style={styles.listHeadingText}>Todo list</Text>
+          <Text style={styles.listHeadingText}>Todo list - {colorScheme} </Text>
         </View>
 
         <FlatList

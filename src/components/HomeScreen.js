@@ -15,6 +15,7 @@ import {
 } from 'react-native';
 import uuid from 'react-native-uuid';
 import { Appearance, useColorScheme } from 'react-native-appearance';
+import { getData, storeData} from '../utl';
 
 Appearance.getColorScheme();
 
@@ -80,6 +81,12 @@ const HomeScreen = ({navigation}) => {
             navigation.navigate('Details', {
               itemId: 0,
             });
+          }}
+        />
+        <Button
+          title="Go to news"
+          onPress={() => {
+            navigation.navigate('News');
           }}
         />
         <View style={styles.listHeading}>

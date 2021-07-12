@@ -28,7 +28,8 @@
     "react-native-tab-view": "^2.16.0",
     "react-native-unimodules": "~0.14.3",
     "react-native-uuid": "^2.0.1",
-    "react-native-web": "~0.13.12"
+    "react-native-web": "~0.13.12",
+    "react-native-webview": "^11.6.5"
   },
   "devDependencies": {
     "@babel/core": "^7.12.9",
